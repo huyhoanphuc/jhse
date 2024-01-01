@@ -1,0 +1,2 @@
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+end)
