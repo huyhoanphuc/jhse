@@ -1,1 +1,3 @@
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+    game.Players.LocalPlayer:Kick("You Kick To Pr!me A-60")
+end)
