@@ -165,13 +165,6 @@ end)
 entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
-		local cufs2 = Instance.new("Sound")
-	cufs2.Parent = game.Workspace
-	cufs2.Name = "Spawn"
-	cufs2.SoundId = "rbxassetid://5567523008"
-	cufs2.Volume = 3
-	cufs2.PlaybackSpeed = 3
-	cufs2:Play()
 		local JumpscareGui = Instance.new("ScreenGui")
     local Background = Instance.new("Frame")
     local Face = Instance.new("ImageLabel")
@@ -197,7 +190,13 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
 
     Background.Parent = JumpscareGui
     Face.Parent = Background
-    
+local scare = Instance.new("Sound")
+scare.Parent = JumpscareGui
+scare.Name = "MyEarsBurn"
+scare.SoundId = "rbxassetid://5567523008"
+scare.PlaybackSpeed = 3
+scare.Volume = 3
+
 local shift = Instance.new("PitchShiftSoundEffect")
 shift.Octave = 0.5
 shift.Parent = scare
