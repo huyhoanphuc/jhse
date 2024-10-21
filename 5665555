@@ -3,6 +3,11 @@ local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 49 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+wait()
+local Rebd = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/Rebound%20Spawer.mp3?raw=true","Rebd")
+				Rebd.Parent = workspace
+				Rebd.Volume = 3
+				Rebd:Play()
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
 ---====== Create entity ======---
@@ -63,14 +68,11 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
-    local Rebd = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/Rebound%20Spawer.mp3?raw=true","Rebd")
-				Rebd.Parent = workspace
-				Rebd.Volume = 2
-				Rebd:Play()
 end)
 
 entity:SetCallback("OnStartMoving", function()
     print("Entity has started moving")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/jhse/refs/heads/main/5665555"))()
 end)
 
 entity:SetCallback("OnEnterRoom", function(room, firstTime)
@@ -108,11 +110,9 @@ end)
 entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
-		local Rebad = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/Rebound%20Jumpscare%20New.mp3?raw=true","Rebad")
-				Rebad.Parent = workspace
-				Rebad.Volume = 2
-				Rebad:Play()
-		local JumpscareGui = Instance.new("ScreenGui")
+		
+		    
+    local JumpscareGui = Instance.new("ScreenGui")
     local Background = Instance.new("Frame")
     local Face = Instance.new("ImageLabel")
 
@@ -157,7 +157,10 @@ eq.HighGain = 10
 eq.MidGain = 10
 eq.LowGain = 3.7
 eq.Parent = scare
-    
+    local Reabed = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/Rebound%20Jumpscare%20New.mp3?raw=true","Reabed")
+Reabed.Parent = workspace
+Reabed.Volume = 2
+Reabed:Play()
         task.spawn(function()
             while JumpscareGui.Parent do
                 Background.BackgroundColor3 = Color3.fromRGB(3, 25, 99)
